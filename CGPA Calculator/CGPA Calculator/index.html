@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scientific CGPA Calculator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Roboto+Mono:wght@300;400;500&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-globes">
+        <div class="globe globe-1"></div>
+        <div class="globe globe-2"></div>
+        <div class="globe globe-3"></div>
+    </div>
+
+    <main class="calculator-container">
+        <header class="calculator-header">
+            <h1>CGPA-9000</h1> <!-- Scientific branding -->
+            <div class="solar-panel"></div>
+        </header>
+
+        <section class="display-screen">
+            <div class="mode-indicators">
+                <span class="mode active">DEG</span>
+                <span class="mode">SCI</span>
+            </div>
+            <div class="result-display">
+                <span id="cgpa-value">0.00</span>
+                <span class="label">CGPA</span>
+            </div>
+            <div class="input-history" id="total-credits-display">Total Credits: 0</div>
+        </section>
+
+        <section class="course-list-container" id="course-list">
+            <!-- Dynamic Course Rows will appear here -->
+            <div class="course-row header-row">
+                <span class="col-header">Course</span>
+                <span class="col-header">Grade (Pt)</span>
+                <span class="col-header">Credits</span>
+                <span class="col-header"></span>
+            </div>
+            <!-- Initial Row -->
+            <div class="course-row input-row">
+                <input type="text" placeholder="Subject 1" class="input-subject">
+                <input type="number" placeholder="10.0" class="input-grade" step="0.1" min="0" max="10">
+                <input type="number" placeholder="3" class="input-credit" step="0.5" min="0">
+                <button class="btn-delete" aria-label="Remove Course">×</button>
+            </div>
+            <div class="course-row input-row">
+                <input type="text" placeholder="Subject 2" class="input-subject">
+                <input type="number" placeholder="9.0" class="input-grade" step="0.1" min="0" max="10">
+                <input type="number" placeholder="4" class="input-credit" step="0.5" min="0">
+                <button class="btn-delete" aria-label="Remove Course">×</button>
+            </div>
+            <div class="course-row input-row">
+                <input type="text" placeholder="Subject 3" class="input-subject">
+                <input type="number" placeholder="8.5" class="input-grade" step="0.1" min="0" max="10">
+                <input type="number" placeholder="3" class="input-credit" step="0.5" min="0">
+                <button class="btn-delete" aria-label="Remove Course">×</button>
+            </div>
+        </section>
+
+        <section class="controls">
+            <button id="add-course-btn" class="btn btn-secondary">
+                <span class="icon">+</span> Add Course
+            </button>
+            <div class="action-group">
+                <button id="reset-btn" class="btn btn-danger">AC</button>
+                <button id="calc-btn" class="btn btn-primary">CALC</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
